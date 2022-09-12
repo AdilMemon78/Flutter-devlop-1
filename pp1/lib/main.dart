@@ -1,44 +1,116 @@
+
 import 'package:flutter/material.dart';
-void  main() {
-  runApp(MyApplication());//Create app(class)
-  
+void main() {
+  runApp(Myapp());
 }
-class MyApplication extends StatelessWidget {//
-  const MyApplication({Key? key}) : super(key: key);
+class Myapp extends StatelessWidget {
+  const Myapp({Key? key}) : super(key: key);
 
   @override
-  
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.yellow,
-        appBar: AppBar(
-          
-          title: Text("Row/Col",
-          style: TextStyle(fontSize: 20,
-          fontStyle: FontStyle.italic,
-          
-          fontWeight: FontWeight.bold,
-          color: Colors.black),
-          ),
-          backgroundColor: Colors.orange,
-          centerTitle: true,
-        ),
-        body: Container(
-          child: Row(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        leading: Icon(Icons.mail_rounded,
+        color: Color.fromARGB(255, 122, 43, 37),
+        size: 25,),
+        title: Text("Email"),
+        //centerTitle: true,
+        backgroundColor: Colors.lime,
+      ),
+      
+      body:Container(
+     //   margin: EdgeInsets.all(20),
+      //  padding: EdgeInsets.all(20),
+        child: Padding(
+          padding:  EdgeInsets.all(10.0),
+          child: Column(
             children: [
-              Expanded(
-                child: Text("Android",style: TextStyle(fontSize: 150,color: Colors.blue),
+              Container(
+                child: Text("Login",
+                style: TextStyle(color: Colors.black,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                fontStyle: FontStyle.italic),
                 ),
               ),
-              Text("Flutter",style: TextStyle(fontSize: 150,color: Colors.green),),
+            Padding(
+              padding:  EdgeInsets.all(10.0),
+              child: TextField(
+                decoration: InputDecoration(
+                 hintText: "First example@gmail.com",
+                  labelText: "Enter Email",
+                 prefixIcon: Icon(Icons.alternate_email_rounded),
+                //   fillColor: Colors.red,
+                   labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.w300,fontStyle: FontStyle.italic,fontSize: 20),
+                   hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
+                 //  prefixIconColor: Colors.black,
+                ),
+                ),
+            ),
+
+        // Padding(
+        //   padding:  EdgeInsets.all(10.0),
+        //   child: TextField(
+        //         decoration: InputDecoration(
+        //           hintText: "example@gmail.com",
+        //           labelText: "Enter Email",
+        //           prefixIcon: Icon(Icons.mark_email_unread),
+        //         //  fillColor: Colors.purple,
+        //           labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontSize: 20),
+        //           hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
+        //         //  prefixIconColor: Colors.black,
+        //           // enabledBorder: OutlineInputBorder(
+        //           //   borderSide:BorderSide (
+        //           //     color:Colors.purple),
+        //           //     borderRadius: BorderRadius.circular(50),),
+        //         ),
+        //         ),
+        //         ),
+
+                 Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "example@gmail.com",
+                    labelText: "Enter Email",
+                    prefixIcon: Icon(Icons.mark_email_read),
+                   // fillColor: Colors.purple,
+                    labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontSize: 20),
+                    hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
+                   prefixIconColor: Colors.black,
+                    enabledBorder: OutlineInputBorder(
+                      borderSide:BorderSide (
+                        color:Colors.purple),
+                      //  borderRadius: BorderRadius.circular(50)
+                       ),
+                        errorText: "opps ! Something Want wrong ",
+                        // errorBorder: OutlineInputBorder(
+                        //   borderSide: BorderSide(color:Colors.redAccent,),
+                        //  borderRadius:BorderRadius.circular(20),
+                        //   ),
+                  ),
+                  ),
+                ),
+
+                 TextField(
+                //   obscureText:true,
+                  decoration: InputDecoration(
+                    hintText: "Password",
+                    labelText: "Enter Password..",
+                    prefixIcon: Icon(Icons.lock_open),
+                    fillColor: Colors.purple,
+                    labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontSize: 20),
+                    hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
+                    prefixIconColor: Colors.black,
+                  ),
+                  ),
             ],
           ),
         ),
-      
-        
-      )
-      
+      ),
+      ),
     );
   }
-}  
+}
