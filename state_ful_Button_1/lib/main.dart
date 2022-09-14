@@ -11,7 +11,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool color_status=true;
+  bool color_status=false;
   Color?colorname;
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,11 @@ class _MyAppState extends State<MyApp> {
             title: Text("Statefull Widgets"),
           ),
           body: Container(
-            height:double.maxFinite,
-            width: double.maxFinite,
+            height: 100, 
+            width: 100,
             color: colorname,
-            child: TextButton(child:Text("Click here"),
+            child: TextButton(
+              child:Text("Click here"),
             onPressed: (){
                 changecolour();
             },
@@ -38,7 +39,7 @@ class _MyAppState extends State<MyApp> {
     if(color_status)
     {
       setState(() {
-        colorname=Colors.yellow;
+        colorname=Color.fromARGB(54, 72, 131, 9);
         color_status=false;
       }
       );
@@ -46,7 +47,7 @@ class _MyAppState extends State<MyApp> {
     else
     {
        setState(() {
-        colorname=Colors.red;
+        colorname=Color.fromARGB(255, 237, 60, 60);
         color_status=true;
     });
   }

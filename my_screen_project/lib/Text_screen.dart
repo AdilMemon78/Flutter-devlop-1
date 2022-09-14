@@ -26,8 +26,6 @@ class MyText extends StatelessWidget {
                       fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.w300,
                       color: Colors.white70,
-                      
-                    
                      ),
                      ),
                 ),

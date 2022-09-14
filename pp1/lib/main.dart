@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 void main() {
   runApp(Myapp());
@@ -8,7 +7,8 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -21,7 +21,7 @@ class Myapp extends StatelessWidget {
       ),
       
       body:Container(
-     //   margin: EdgeInsets.all(20),
+        margin: EdgeInsets.all(20),
       //  padding: EdgeInsets.all(20),
         child: Padding(
           padding:  EdgeInsets.all(10.0),
@@ -31,7 +31,7 @@ class Myapp extends StatelessWidget {
                 child: Text("Login",
                 style: TextStyle(color: Colors.black,
                 fontSize: 30,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w100,
                 fontStyle: FontStyle.italic),
                 ),
               ),
@@ -43,31 +43,32 @@ class Myapp extends StatelessWidget {
                   labelText: "Enter Email",
                  prefixIcon: Icon(Icons.alternate_email_rounded),
                 //   fillColor: Colors.red,
-                   labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.w300,fontStyle: FontStyle.italic,fontSize: 20),
-                   hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
+                   labelStyle: TextStyle(color: Colors.black87,fontWeight: FontWeight.w300,fontStyle: FontStyle.italic,fontSize: 20),
+                   hintStyle: TextStyle(color: Colors.yellow,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
                  //  prefixIconColor: Colors.black,
                 ),
                 ),
             ),
 
-        // Padding(
-        //   padding:  EdgeInsets.all(10.0),
-        //   child: TextField(
-        //         decoration: InputDecoration(
-        //           hintText: "example@gmail.com",
-        //           labelText: "Enter Email",
-        //           prefixIcon: Icon(Icons.mark_email_unread),
-        //         //  fillColor: Colors.purple,
-        //           labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontSize: 20),
-        //           hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
-        //         //  prefixIconColor: Colors.black,
-        //           // enabledBorder: OutlineInputBorder(
-        //           //   borderSide:BorderSide (
-        //           //     color:Colors.purple),
-        //           //     borderRadius: BorderRadius.circular(50),),
-        //         ),
-        //         ),
-        //         ),
+        Padding(
+          padding:  EdgeInsets.all(10.0),
+          child: TextField(
+                decoration: InputDecoration(
+                  hintText: "example@gmail.com",
+                  labelText: "Enter Email",
+                  prefixIcon: Icon(Icons.mark_email_unread),
+                //  fillColor: Colors.purple,
+                  labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontSize: 20),
+                  hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
+                 prefixIconColor: Colors.black,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide:BorderSide (
+                      color:Colors.yellow),
+                 //     borderRadius: BorderRadius.circular(50),
+                   ),
+                ),
+                ),
+                ),
 
                  Padding(
                   padding: const EdgeInsets.all(10.0),
@@ -79,21 +80,21 @@ class Myapp extends StatelessWidget {
                    // fillColor: Colors.purple,
                     labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontSize: 20),
                     hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
-                   prefixIconColor: Colors.black,
-                    enabledBorder: OutlineInputBorder(
-                      borderSide:BorderSide (
-                        color:Colors.purple),
-                      //  borderRadius: BorderRadius.circular(50)
-                       ),
+                 //  prefixIconColor: Colors.yellow,
+                    // enabledBorder: OutlineInputBorder(
+                    //   borderSide:BorderSide (
+                    //     color:Colors.purple),
+                    //   //  borderRadius: BorderRadius.circular(50)
+                    //    ),
                         errorText: "opps ! Something Want wrong ",
-                        // errorBorder: OutlineInputBorder(
-                        //   borderSide: BorderSide(color:Colors.redAccent,),
-                        //  borderRadius:BorderRadius.circular(20),
-                        //   ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color:Colors.redAccent,),
+                         borderRadius:BorderRadius.circular(20),
+                          ),
                   ),
                   ),
                 ),
-
+            
                  TextField(
                 //   obscureText:true,
                   decoration: InputDecoration(
