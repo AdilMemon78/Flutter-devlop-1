@@ -80,12 +80,12 @@ class Myapp extends StatelessWidget {
                    // fillColor: Colors.purple,
                     labelStyle: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontStyle: FontStyle.italic,fontSize: 20),
                     hintStyle: TextStyle(color: Colors.blue,fontStyle: FontStyle.italic,fontWeight: FontWeight.bold,fontSize:16),
-                 //  prefixIconColor: Colors.yellow,
-                    // enabledBorder: OutlineInputBorder(
-                    //   borderSide:BorderSide (
-                    //     color:Colors.purple),
-                    //   //  borderRadius: BorderRadius.circular(50)
-                    //    ),
+                  prefixIconColor: Colors.yellow,
+                    enabledBorder: OutlineInputBorder(
+                      borderSide:BorderSide (
+                        color:Colors.purple),
+                        borderRadius: BorderRadius.circular(50)
+                       ),
                         errorText: "opps ! Something Want wrong ",
                         errorBorder: OutlineInputBorder(
                           borderSide: BorderSide(color:Colors.redAccent,),
